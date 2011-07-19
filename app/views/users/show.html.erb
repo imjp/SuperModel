@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+
+
+<h2>Profile</h2>
+<%= form_for([@user, @user.build_profile]) do |f| %>
+	<div class="field">
+		<%= f.label :first_name %><br />
+		<%= f.text_field :first_name %>
+	</div>
+	<div class="field">
+		<%= f.label :last_name %><br />
+		<%= f.text_field :last_name %>
+	</div>
+	<div class="field">
+		<%= f.label :picture %><br />
+		<%= f.text_field :picture %>
+	</div>
+	<div class="field"> 
+		<%= f.radio_button(:sex, "male") %>
+		<%= f.label(:sex, "Male") %>
+		<%= f.radio_button(:sex, "female") %>
+		<%= f.label(:sex, "Female") %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div> 
+<% end %>
+
+
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

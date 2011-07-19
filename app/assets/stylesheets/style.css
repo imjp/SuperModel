@@ -1,0 +1,269 @@
+body{
+	font-family: Arial, Sans-Serif;
+}
+
+a, a:visited{
+	text-decoration: none;
+	color: #666;
+}
+
+a:hover{
+	color: #666;
+
+}
+
+a:active{
+	color: #1f1f1f;
+}
+
+
+header{
+	background: #f1f1f1;
+	border-bottom: 1px solid #e4e4e4;
+	margin: 0 0 60px 0; 
+	height: 75px;
+	padding: 0 20px;
+}
+
+header h1 a{
+	font-size: 46px;
+	font-family: 'Myriad Pro', Arial, Sans-Serif;
+	font-weight: normal;
+	float: left;
+	margin: 10px 0 0 0;
+}
+
+#top_bar{
+	background: #444;
+	border-bottom: 1px solid #e5e5e5;
+	height: 25px;
+	padding: 0 20px;
+	font-size: 11px;
+	color: #ccc;
+}
+
+#top_bar ul{
+	float: left;
+	list-style: none;
+	margin: 5px 0 0 0; 
+}
+
+#top_bar ul li{
+	margin: 0 15px 0 0; 	
+	float: left;
+}
+
+#top_bar ul li a{
+	color: #ccc;
+	display: block;
+}
+
+#top_bar ul li a:hover{
+	color: #fff;
+}
+
+.auth{
+	float: right;
+	margin: 5px 0 0 0;
+} 
+
+.auth a{
+	color: #ccc;
+}
+
+.auth a:hover{
+	color: #fff;
+}
+
+nav{
+	float: right;
+	margin: 24px 0 0 0; 
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav ul li{
+	float: left;
+	display: inline;
+
+}
+
+nav ul li a{
+	margin: 0 10px;
+	padding: 5px;
+	display: block;
+	font-family: 'Myriad Pro', Arial, Sans-Serif;
+	font-size: 18px;
+	color: #999;
+}
+
+nav ul li a:last-child{
+	margin-right: 0 !important;
+}
+
+#container{ 
+	padding: 0 60px; 
+}
+
+.models_list{
+	list-style: none;
+	clear: both;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.models_list li{
+	float: left;
+	margin: 5px;
+	padding: 3px;
+	float: left;
+	width: 175px;
+	border-radius: 0 0 3px 3px;
+}
+
+.models_list li:hover{ 
+}
+
+.models_list .model-name{
+	display: block;
+	padding: 0 3px;
+}
+
+
+
+.btn, .actions input{
+	clear: both;
+	overflow: hidden;
+	background: #2d2d2d;
+	padding: 10px;
+	color: #fff !important;
+	text-transform: uppercase; 
+	border-radius: 3px;
+	font-weight: bold;
+	box-shadow: 0 0 5px #565656;
+	border: none !important;
+}
+
+.btn:hover, .actions input:hover{
+	background: #333;
+}
+
+.btn:active, .actions input:active{
+	background: #222;
+}
+
+.new_model{
+	margin: 20px 0 0 0;
+	float: left; 
+}
+
+
+#container h1{
+	font-size: 46px;
+	font-family: 'Myriad Pro', Arial, Sans-Serif;
+	font-weight: normal;
+	text-align: center; 
+	color: #999;
+	margin: 0 0 40px 0; 
+}
+
+#container h2{	
+	font-size: 32px;
+	font-family: 'Myriad Pro', Arial, Sans-Serif;
+	font-weight: normal; 
+	color: #999;
+	margin: 0 0 40px 0; 
+}
+	
+}
+
+
+
+footer{
+	display: none !important;
+	clear: both;
+	overflow: hidden; 
+	width: 100%;
+	text-align: center;
+	margin: 30px 0;
+	font-size: 11px;
+	color: #aaa;
+}
+ 
+form label{ 
+}
+
+form input, form text-area{
+	padding: 5px;
+	border-radius: 3px;
+	border: 1px solid #d5d5d5; 
+	color: #999;
+}
+
+form label{
+	margin: 0 0 5px 0;
+	font-weight: bold;
+}
+
+form .field{
+	margin: 0 0 15px 0;
+}
+
+#name_dropdown{
+	float: left;
+	margin: 60px 0 0 0;
+	padding: 5px;
+	width: 200px;
+	border: 1px solid #d5d5d5;
+} 
+
+#portfolio{
+	width: 650px;
+	margin: 0 auto 0 auto;
+	padding: 40px 0 0 0;
+	font-size: 18px;
+	clear: both;
+	overflow: hidden;
+	text-transform: uppercase;
+	color: #999;
+	font-family: 'Myriad Pro', Arial, Sans-Serif;
+}
+
+#portfolio .portfolio_image{
+	float: right;
+}
+
+#portfolio ul{
+	list-style: none;
+	margin: 100px 0 0 0;
+	padding: 0;
+	width: 300px;
+}
+
+#portfolio ul li{
+	margin: 0 0 15px 0;
+}
+
+#portfolio ul li .label{ 
+	width: 120px !important;
+	float: left;
+}
+
+#user_new input{
+	margin: 0 0 10px 0;
+}
+
+#user_new #user_remember_me{
+	margin: 0 !important;
+}
+
+#user_new .btn{
+	margin: 15px 0 0 0;
+}
+
+table td, table th{
+	padding: 5px;
+}

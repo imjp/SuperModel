@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<%= stylesheet_link_tag "application" %>  
+		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js", "application" %> 
+		<%= csrf_meta_tags %> 
+	</head>
+<body>
+	<div id="top_bar"> 
+			<ul>
+				<li><%= link_to "All Users", users_path %></li>  
+				<li><%= link_to "New User", new_user_path %></li>   
+			</ul> 
+	
+	 
+	</div>
+	<header>
+		<div class="logo">
+			<h1><%= link_to "PureModels", root_path %></h1>
+		</div>
+		
+		<nav>
+			<ul> 
+				<li><a href="/male">Male</a></li>
+				<li><a href="/female">Female</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/contact">Contact</a></li> 
+			</ul>
+		</nav>
+	</header>
+	
+	<section id="container">
+		<% if notice %>
+			<p id="notice" ><%= notice %></p>
+		<% end %>
+		<%= yield %>
+	</section>
+	
+	<footer> 
+	</footer>
+</body>
+</html> 
