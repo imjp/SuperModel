@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+<h2><%= @user.name %></h2>
+
+<h3>Profile</h3> 
+<%= @user.profile.first_name %>
+<%= @user.profile.last_name %>
+<%= @user.profile.sex %>
+<%= link_to image_tag(@user.profile.picture, :width => "175") %>
 
 
-
-<h2>Profile</h2>
+<h3>Add Profile</h3>
 <%= form_for([@user, @user.build_profile]) do |f| %>
 	<div class="field">
 		<%= f.label :first_name %><br />
