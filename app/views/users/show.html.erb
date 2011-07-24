@@ -1,42 +1,11 @@
-<p id="notice"><%= notice %></p>
+ <h1><%= @user.name %></h1>
 
-<h2><%= @user.name %></h2>
-
-<% unless @user.profile.blank? %> 
-<h3>Profile</h3>  
-	<%= @user.profile.first_name %>
-	<%= @user.profile.last_name %>
-	<%= @user.profile.sex %>
-	<%= link_to image_tag(@user.profile.picture, :width => "175") %> 
-<% end %>
-
- 
-	<h3>Add Profile</h3>
-	<%= form_for([@user, @user.build_profile]) do |f| %>
-		<div class="field">
-			<%= f.label :first_name %><br />
-			<%= f.text_field :first_name %>
-		</div>
-		<div class="field">
-			<%= f.label :last_name %><br />
-			<%= f.text_field :last_name %>
-		</div>
-		<div class="field">
-			<%= f.label :picture %><br />
-			<%= f.text_field :picture %>
-		</div>
-		<div class="field"> 
-			<%= f.radio_button(:sex, "male") %>
-			<%= f.label(:sex, "Male") %>
-			<%= f.radio_button(:sex, "female") %>
-			<%= f.label(:sex, "Female") %>
-		</div>
-		<div class="actions">
-			<%= f.submit %>
-		</div> 
-	<% end %> 
-
-
-
+<% unless @user.portfolio.blank? %>  
+	<%= render "portfolios/portfolio"  %>
+<% end %>  
+  
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', :back %> |
+<strong><%= link_to 'Destroy', @user, confirm: 'Are you sure?', :method => :delete %></strong> 
+ 
+<%= select_tag "name_dropdown", options_from_collection_for_select(@users, "friendly_id", "name", @user.friendly_id) %>

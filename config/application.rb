@@ -37,6 +37,6 @@ module Supermodel
     config.filter_parameters += [:password]
 
     # Enable the asset pipeline
-    config.assets.enabled = true
+    config.assets.enabled = true 
   end
 end

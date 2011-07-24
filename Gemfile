@@ -4,6 +4,10 @@ gem 'rails', '3.1.0.rc4'
 gem 'sprockets', '= 2.0.0.beta.10' 
 gem 'friendly_id', '~> 3.3.0.alpha2'
 gem 'devise'
+gem 'paperclip'
+
+
+
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -24,9 +28,4 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
-group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
-end
+# gem 'ruby-debug19', :require => 'ruby-debug' 

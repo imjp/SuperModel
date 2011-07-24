@@ -24,4 +24,6 @@ Supermodel::Application.configure do
 
   # Do not compress assets
   config.assets.compress = false
+  
+  Paperclip.options[:command_path] = "/c/Program Files/ImageMagick-6.7.1-Q16/identify"
 end

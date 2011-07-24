@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  height: 1
+  bust: MyString
+  waist: 1
+  hips: 1
+  shoes: 1
+  eyes: MyString
+  hair: MyString
+  image_1: MyString
+  image_2: MyString
+  image_3: MyString
+  user: 
+
+two:
+  height: 1
+  bust: MyString
+  waist: 1
+  hips: 1
+  shoes: 1
+  eyes: MyString
+  hair: MyString
+  image_1: MyString
+  image_2: MyString
+  image_3: MyString
+  user: 

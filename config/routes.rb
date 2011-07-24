@@ -2,9 +2,12 @@ Supermodel::Application.routes.draw do
 	get "home/index"
 
 	resources :users do
-		resources :profiles
+		resources :portfolios
 	end
 	
-	root :to => 'home#index'
+	root :to => 'users#index'
+	match '/' => redirect('/users')
+	match '/:id' => 'users#show' 
+	
 
 end

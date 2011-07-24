@@ -13,8 +13,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find(params[:id]) 
-
+    @user = User.find(params[:id])  
+	@portfolio = @user.portfolio
+	
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
@@ -34,19 +35,19 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    @user = User.find(params[:id]) 
+	@portfolio = @user.portfolio
   end
 
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user]) 
-	@user.build_profile
+    @user = User.create(params[:user])  
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render json: @user, status: :created, location: @user }
+        format.html { redirect_to edit_user_path(@user), notice: 'User was successfully created.' }
+        format.json { render json: edit_user_path(@user), status: :created, location: @user }
       else
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -77,7 +78,7 @@ class UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to users_url }
+      format.html { redirect_to root_url }
       format.json { head :ok }
     end
   end
