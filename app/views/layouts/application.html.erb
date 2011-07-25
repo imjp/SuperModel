@@ -35,36 +35,6 @@
 	
 	<footer> 
 	</footer>
-		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js", "rails", "shadowbox" %> 
-		<script>
-			$(document).ready(function() {
-				//dropdown navigation
-				$("#name_dropdown").change(function() {
-					window.location.href = "http://puremodels.com" + $(this).val();
-				});	  
-				
-				  
-				//tabs 
-				var tabContents = $(".tab_content").hide(), 
-					tabs = $(".tab_nav li");
-
-				tabs.first().addClass("active").show();
-				tabContents.first().show();
-
-				tabs.click(function() {
-					var $this = $(this), 
-						activeTab = $this.find('a').attr('href');
-					
-					if(!$this.hasClass('active')){
-						$this.addClass('active').siblings().removeClass('active');
-						tabContents.hide().filter(activeTab).fadeIn();
-					}
-					
-					return false;
-				});
-			});
-
-			Shadowbox.init();
-		</script>
+		<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js", "application" %> 
 </body>
 </html> 
