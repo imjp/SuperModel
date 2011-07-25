@@ -1,5 +1,5 @@
 <div id="profile" class="tab_content">
-	<%= form_for(@user) do |f| %>
+	<%= form_for(@user, :html => { :multipart => true }) do |f| %>
 		<% if @user.errors.any? %>
 			<div id="error_explanation">
 				<h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -18,7 +18,7 @@
 		</div>
 		<div class="field">
 			<%= f.label :photo_1, "Photo" %><br />
-			<%= f.text_field :photo_1 %>
+			<%= f.file_field :photo_1 %>
 		</div>
 		<div class="field">
 			<%= f.label :photo_2, "Photo 2" %><br />

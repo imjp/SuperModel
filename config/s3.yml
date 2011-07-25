@@ -1,0 +1,9 @@
+development:
+  access_key_id: AKIAJQC4H6NYRSRPXDDA
+  secret_access_key: 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
+test:
+  access_key_id: xxx
+  secret_access_key: xxx
+production:
+  access_key_id: AKIAJQC4H6NYRSRPXDDA
+  secret_access_key: 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
