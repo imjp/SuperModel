@@ -1,5 +1,10 @@
-Shadowbox.init();
-$(document).ready(function() {	  
+$(document).ready(function() {
+	//dropdown navigation
+	$("#name_dropdown").change(function() {
+		window.location.href = "http://puremodels.heroku.com" + $(this).val();
+	});	  
+	
+	  
 	//tabs 
 	var tabContents = $(".tab_content").hide(), 
 		tabs = $(".tab_nav li");
@@ -18,11 +23,6 @@ $(document).ready(function() {
 		
 		return false;
 	});
-	
-	
-	//dropdown navigation
-	$("#name_dropdown").change(function() {
-		window.location.href = "http://puremodels.heroku.com" + $(this).val();
-	});	  
 });
 
+Shadowbox.init();
