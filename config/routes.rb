@@ -3,6 +3,7 @@ Supermodel::Application.routes.draw do
 
 	resources :users do
 		resources :portfolios
+		resources :contact_infos
 	end
 	
 	root :to => 'users#index'

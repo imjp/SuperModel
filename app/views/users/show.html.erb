@@ -1,11 +1,29 @@
  <h1><%= @user.name %></h1>
-
-<% unless @user.portfolio.blank? %>  
-	<%= render "portfolios/portfolio"  %>
-<% end %>  
-  
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', :back %> |
-<strong><%= link_to 'Destroy', @user, confirm: 'Are you sure?', :method => :delete %></strong> 
  
-<%= select_tag "name_dropdown", options_from_collection_for_select(@users, "friendly_id", "name", @user.friendly_id) %>
+<div id="content">	
+	<%= link_to image_tag(@user.photo_1, :class => "photo", :alt => @user.name, :width => "350", :height => "450"), @user.photo_1, :rel => "shadowbox[portfolio]" %>
+	<%= link_to image_tag(@user.photo_2, :class => "photo", :alt => @user.name, :width => "350", :height => "450"), @user.photo_2, :rel => "shadowbox[portfolio]", :class => "hidden" %>
+	 
+	 
+	<%= render "portfolios/portfolio"  %>  
+	<%= render "contact_infos/contact_info" %>
+	  
+	<span class="photo_caption">Click the photo above to see more</span>
+</div>
+
+
+
+<div class="content_bot">
+	<%= select_tag "name_dropdown", options_from_collection_for_select(@users, "friendly_id", "name", @user.friendly_id) %>
+	
+	<div class="crud">
+		<%= link_to "Edit", edit_user_path(@user) %> |
+		<%= link_to "Back", :back %> |
+		<strong><%= link_to "Destroy", @user, confirm: "Are you sure?", :method => :delete %></strong> 
+	</div>	
+	
+	<ul class="tab_nav">
+		<li><a href="#portfolio">Portfolio</a></li>
+		<li><a href="#contact_info">Contact Info</a></li>
+	</ul>
+</div>

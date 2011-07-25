@@ -1,74 +1,73 @@
-<h3>Update Portfolio</h3>
-
-
-<% if @user.gender == "female" %>
-	<%= form_for([@user, @portfolio]) do |f| %>
-		<div class="field">
-			<%= f.label :height %><br />
-			<%= f.text_field :height %>
-		</div>
-		<div class="field">
-			<%= f.label :bust %><br />
-			<%= f.text_field :bust %>
-		</div>
-		<div class="field">
-			<%= f.label :waist %><br />
-			<%= f.text_field :waist %>
-		</div>	 
-		<div class="field">
-			<%= f.label :hips %><br />
-			<%= f.text_field :hips %>
-		</div>
-		<div class="field">
-			<%= f.label :shoes %><br />
-			<%= f.text_field :shoes %>
-		</div>
-		<div class="field">
-			<%= f.label :eyes %><br />
-			<%= f.text_field :eyes %>
-		</div>
-		<div class="field">
-			<%= f.label :hair %><br />
-			<%= f.text_field :hair %>
-		</div> 
-		
-		<div class="actions">
-			<%= f.submit %>
-		</div> 
-	<% end %> 
-<% else %>
-	<%= form_for([@user, @portfolio]) do |f| %>
-		<div class="field">
-			<%= f.label :height %><br />
-			<%= f.text_field :height %>
-		</div>
-		<div class="field">
-			<%= f.label :suit %><br />
-			<%= f.text_field :suit %>
-		</div>
-		<div class="field">
-			<%= f.label :waist %><br />
-			<%= f.text_field :waist %>
-		</div>	 
-		<div class="field">
-			<%= f.label :inseam %><br />
-			<%= f.text_field :inseam %>
-		</div>
-		<div class="field">
-			<%= f.label :shoes %><br />
-			<%= f.text_field :shoes %>
-		</div>
-		<div class="field">
-			<%= f.label :eyes %><br />
-			<%= f.text_field :eyes %>
-		</div>
-		<div class="field">
-			<%= f.label :hair %><br />
-			<%= f.text_field :hair %>
-		</div> 
-		
-		<div class="actions">
-			<%= f.submit %>
-		</div> 
-	<% end %> 
-<% end %>
+<div id="portfolio" class="tab_content">
+	<% if @user.gender == "female" %>
+		<%= form_for([@user, @portfolio]) do |f| %>
+			<div class="field">
+				<%= f.label :height %><br />
+				<%= f.text_field :height %>
+			</div>
+			<div class="field">
+				<%= f.label :bust %><br />
+				<%= f.text_field :bust %>
+			</div>
+			<div class="field">
+				<%= f.label :waist %><br />
+				<%= f.text_field :waist %>
+			</div>	 
+			<div class="field">
+				<%= f.label :hips %><br />
+				<%= f.text_field :hips %>
+			</div>
+			<div class="field">
+				<%= f.label :shoes %><br />
+				<%= f.text_field :shoes %>
+			</div>
+			<div class="field">
+				<%= f.label :eyes %><br />
+				<%= f.text_field :eyes %>
+			</div>
+			<div class="field">
+				<%= f.label :hair %><br />
+				<%= f.text_field :hair %>
+			</div> 
+			
+			<div class="actions">
+				<%= f.submit %>
+			</div> 
+		<% end %> 
+	<% else %>
+		<%= form_for([@user, @portfolio]) do |f| %>
+			<div class="field">
+				<%= f.label :height %><br />
+				<%= f.text_field :height %>
+			</div>
+			<div class="field">
+				<%= f.label :suit %><br />
+				<%= f.text_field :suit %>
+			</div>
+			<div class="field">
+				<%= f.label :waist %><br />
+				<%= f.text_field :waist %>
+			</div>	 
+			<div class="field">
+				<%= f.label :inseam %><br />
+				<%= f.text_field :inseam %>
+			</div>
+			<div class="field">
+				<%= f.label :shoes %><br />
+				<%= f.text_field :shoes %>
+			</div>
+			<div class="field">
+				<%= f.label :eyes %><br />
+				<%= f.text_field :eyes %>
+			</div>
+			<div class="field">
+				<%= f.label :hair %><br />
+				<%= f.text_field :hair %>
+			</div> 
+			
+			<div class="actions">
+				<%= f.submit %>
+			</div> 
+		<% end %> 
+	<% end %>
+</div>

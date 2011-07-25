@@ -1,0 +1,15 @@
+<div id="contact_info" class="tab_content">
+	<%= form_for([@user, @contact_info]) do |f| %>
+		<div class="field">
+			<%= f.label :phone %><br />
+			<%= f.text_field :phone %>
+		</div>
+		<div class="field">
+			<%= f.label :facebook %><br />
+			<%= f.text_field :facebook %>
+		</div> 
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+	<% end %>  
+</div>

@@ -23,7 +23,5 @@ Supermodel::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 
   # Do not compress assets
-  config.assets.compress = false
-  
-  Paperclip.options[:command_path] = "/c/Program Files/ImageMagick-6.7.1-Q16/identify"
+  config.assets.compress = false 
 end

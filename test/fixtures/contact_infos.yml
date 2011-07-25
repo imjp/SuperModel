@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  phone: 1
+  facebook: MyString
+  user: 
+
+two:
+  phone: 1
+  facebook: MyString
+  user: 

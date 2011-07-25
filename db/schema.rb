@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110724010105) do
+ActiveRecord::Schema.define(:version => 20110724232639) do
+
+  create_table "contact_infos", :force => true do |t|
+    t.integer  "phone"
+    t.string   "facebook"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "contact_infos", ["user_id"], :name => "index_contact_infos_on_user_id"
 
   create_table "portfolios", :force => true do |t|
     t.integer  "height"

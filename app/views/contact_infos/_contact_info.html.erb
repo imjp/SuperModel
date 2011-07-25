@@ -1,0 +1,13 @@
+<div id="contact_info" class="tab_content">
+	<ul>
+		<li>
+			<div class="label">Phone</div>
+			<%= @user.contact_info.phone %>
+		</li>
+			
+		<li>
+			<div class="label">Facebook</div>
+			<%= link_to "View Profile", @user.contact_info.facebook, :target => :blank %>
+		</li>
+	</ul>
+</div>

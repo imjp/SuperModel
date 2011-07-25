@@ -177,8 +177,7 @@ nav ul li a:last-child{
 	color: #999;
 	margin: 0 0 40px 0; 
 }
-	
-}
+	 
 
 
 
@@ -192,20 +191,24 @@ footer{
 	font-size: 11px;
 	color: #aaa;
 }
- 
-form label{ 
-}
+  
 
 form input, form text-area{
 	padding: 5px;
 	border-radius: 3px;
 	border: 1px solid #d5d5d5; 
 	color: #999;
+	font-size: 16px;
+	font-family: Arial, Sans-Serif;
 }
 
 form label{
-	margin: 0 0 5px 0;
+	margin: 0 0 5px 0; 
+	font-size: 16px;
 	font-weight: bold;
+	color: #444;
+	font-family: Arial, Sans-Serif;
+	text-transform: none;
 }
 
 form .field{
@@ -213,41 +216,51 @@ form .field{
 }
 
 #name_dropdown{
-	float: left;
-	margin: 60px 0 0 0;
+	float: left;  
 	padding: 5px;
 	width: 200px;
 	border: 1px solid #d5d5d5;
 } 
 
-#portfolio{
+#content{
 	width: 650px;
 	margin: 0 auto 0 auto;
 	padding: 40px 0 0 0;
-	font-size: 18px;
 	clear: both;
 	overflow: hidden;
-	text-transform: uppercase;
-	color: #999;
-	font-family: 'Myriad Pro', Arial, Sans-Serif;
 }
 
-#portfolio .portfolio_image{
+#content h3{
+	font-size: 22px;
+	font-style: italic;
+}
+
+.photo{
 	float: right;
 }
 
-#portfolio ul{
+.photo_caption{
+	float: right;
+	font-size: 12px;
+	font-family: Arial, Sans-Serif;
+	text-transform: none;
+	clear: right;
+	margin: 5px 85px 0 0;
+	color: #999;
+}
+
+#content ul{
 	list-style: none;
 	margin: 100px 0 0 0;
 	padding: 0;
 	width: 300px;
 }
 
-#portfolio ul li{
+#content ul li{
 	margin: 0 0 15px 0;
 }
 
-#portfolio ul li .label{ 
+#content ul li .label{ 
 	width: 120px !important;
 	float: left;
 }
@@ -267,3 +280,54 @@ form .field{
 table td, table th{
 	padding: 5px;
 }
+
+.hidden{ display: none; }
+
+#profile, #portfolio, #contact_info{ 
+	text-transform: uppercase;
+	color: #999;
+	font-size: 18px;
+	font-family: 'Myriad Pro', Arial, Sans-Serif;
+}
+ 
+.content_bot{
+	clear: both;
+	overflow: hidden;
+	margin: 60px 0 20px 0;
+}
+
+.crud{ 
+	float: right;
+	margin: 7px 0 0 0;
+}
+
+
+.tab_nav{
+	list-style: none;
+	margin: 0 auto;
+	width: 400px;
+	text-transform: uppercase;  
+	overflow: display; 
+	height: 30px !important;
+}
+
+.tab_nav li{
+	float: left;
+	margin: 0 1px 0 0;
+}
+
+.tab_nav li a{
+	color: #999;
+	outline: none; 
+	padding: 7px 20px;
+	display: block;
+}
+
+.tab_nav li a:active, .tab_nav .active a{
+	text-align: center;
+	color: #fff; 
+}
+
+.tab_nav .active, .tab_nav li:active{
+	background: #999;  
+} 

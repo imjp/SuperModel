@@ -15,6 +15,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])  
 	@portfolio = @user.portfolio
+	@contact_info = @user.contact_info
+	@users = User.all
+	@title = @user.name
 	
     respond_to do |format|
       format.html # show.html.erb
@@ -26,6 +29,7 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
+	@title = 'Register'
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,13 +40,15 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id]) 
+	@title = 'Editing ' + @user.name
 	@portfolio = @user.portfolio
+	@contact_info = @user.contact_info
   end
 
   # POST /users
   # POST /users.json
   def create
-    @user = User.create(params[:user])  
+    @user = User.new(params[:user])  
 
     respond_to do |format|
       if @user.save

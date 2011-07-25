@@ -1,7 +1,21 @@
 <h1>Editing <%= @user.name %></h1>
 
-<%= render "form" %>   
+<div id="content">	
+	<%= render "form" %>   
+	<%= render "portfolios/form" %>
+	<%= render "contact_infos/form" %>
+</div>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', :back %> |
-<strong><%= link_to 'Destroy', @user, confirm: 'Are you sure?', :method => :delete %></strong>
+<div class="content_bot">
+	<ul class="tab_nav">
+		<li><a href="#profile">Profile</a></li>
+		<li><a href="#portfolio">Portfolio</a></li>
+		<li><a href="#contact_info">Contact Info</a></li>
+	</ul>
+	
+	<div class="crud">
+		<%= link_to "Show", @user %> |
+		<%= link_to "Back", :back %> |
+		<strong><%= link_to "Destroy", @user, confirm: "Are you sure?", :method => :delete %></strong>
+	</div>
+</div>
