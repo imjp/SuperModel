@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110724232639) do
+ActiveRecord::Schema.define(:version => 20110726025944) do
 
   create_table "contact_infos", :force => true do |t|
     t.integer  "phone"
@@ -76,6 +76,12 @@ ActiveRecord::Schema.define(:version => 20110724232639) do
     t.string   "photo_1_content_type"
     t.integer  "photo_1_file_size"
     t.datetime "photo_1_updated_at"
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.string   "auth_token"
+    t.string   "password_reset_token"
+    t.datetime "password_reset_sent_at"
   end
 
 end

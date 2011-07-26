@@ -17,9 +17,13 @@
 	<%= select_tag "name_dropdown", options_from_collection_for_select(@users, "friendly_id", "name", @user.friendly_id) %>
 	
 	<div class="crud">
-		<%= link_to "Edit", edit_user_path(@user) %> |
-		<%= link_to "Back", :back %> |
-		<strong><%= link_to "Destroy", @user, confirm: "Are you sure?", :method => :delete %></strong> 
+		<% if current_user == @user %>	
+			<%= link_to "Edit", edit_user_path(@user) %> |
+			<%= link_to "Back", root_url %> |
+			<strong><%= link_to "Destroy", @user, confirm: "Are you sure?", :method => :delete %></strong>
+		<% else %>
+			<%= link_to "Back", root_url %>
+		<% end %>
 	</div>	
 	
 	<ul class="tab_nav">

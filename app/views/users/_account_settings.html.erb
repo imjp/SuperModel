@@ -1,4 +1,4 @@
-<div id="profile">
+<div id="account_settings" class="tab_content">
 	<%= form_for(@user) do |f| %>
 		<% if @user.errors.any? %>
 			<div id="error_explanation">
@@ -11,11 +11,7 @@
 				</ul>
 			</div>
 		<% end %>
-
-		<div class="field">
-			<%= f.label :name, "Full Name" %><br />
-			<%= f.text_field :name %>
-		</div> 
+ 
 		<div class="field">
 			<%= f.label :email %><br />
 			<%= f.text_field :email %>

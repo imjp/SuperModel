@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  # GET /users
-  # GET /users.json
+	before_filter :authenticate_user!, :only => [:edit, :update, :destroy]
+	 
   def index
     @users = User.all
 
@@ -9,9 +9,7 @@ class UsersController < ApplicationController
       format.json { render json: @users }
     end
   end
-
-  # GET /users/1
-  # GET /users/1.json
+  
   def show
     @user = User.find(params[:id])  
 	@portfolio = @user.portfolio
@@ -23,10 +21,8 @@ class UsersController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @user }
     end
-  end
-
-  # GET /users/new
-  # GET /users/new.json
+  end 
+  
   def new
     @user = User.new
 	@title = 'Register'
@@ -36,17 +32,16 @@ class UsersController < ApplicationController
       format.json { render json: @user }
     end
   end
-
-  # GET /users/1/edit
+ 
   def edit
     @user = User.find(params[:id]) 
+	redirect_to root_url unless current_user == @user, :notice => "You cannot edit other people's profiles"
+	
 	@title = 'Editing ' + @user.name
 	@portfolio = @user.portfolio
 	@contact_info = @user.contact_info
   end
-
-  # POST /users
-  # POST /users.json
+ 
   def create
     @user = User.new(params[:user])  
 
@@ -60,15 +55,13 @@ class UsersController < ApplicationController
       end
     end
   end
-
-  # PUT /users/1
-  # PUT /users/1.json
+ 
   def update
     @user = User.find(params[:id])
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to edit_user_path(@user), notice: 'User was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -76,9 +69,7 @@ class UsersController < ApplicationController
       end
     end
   end
-
-  # DELETE /users/1
-  # DELETE /users/1.json
+ 
   def destroy
     @user = User.find(params[:id])
     @user.destroy

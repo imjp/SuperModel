@@ -1,9 +1,10 @@
 <h1>Editing <%= @user.name %></h1>
 
 <div id="content">	
-	<%= render "form" %>   
+	<%= render "edit_form" %>   
 	<%= render "portfolios/form" %>
 	<%= render "contact_infos/form" %>
+	<%= render "account_settings" %>
 </div>
 
 <div class="content_bot">
@@ -11,6 +12,7 @@
 		<li><a href="#profile">Profile</a></li>
 		<li><a href="#portfolio">Portfolio</a></li>
 		<li><a href="#contact_info">Contact Info</a></li>
+		<li><a href="#account_settings">Account</a></li>
 	</ul>
 	
 	<div class="crud">

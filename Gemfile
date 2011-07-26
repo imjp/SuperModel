@@ -1,12 +1,12 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc4'
-gem 'sprockets', '= 2.0.0.beta.10' 
+gem 'rails', '3.1.0.rc5'
+gem 'sprockets', '= 2.0.0.beta.12' 
 gem 'friendly_id', '~> 3.3.0.alpha2'
 gem 'devise'
 gem 'paperclip'
 gem 'aws-s3'
-
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 
 
@@ -32,6 +32,6 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug' 
 
 group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3'
+  # gem 'therubyracer-heroku', '0.8.1.pre3'
   gem 'pg'
 end

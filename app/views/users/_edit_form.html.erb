@@ -1,4 +1,4 @@
-<div id="profile">
+<div id="profile" class="tab_content">
 	<%= form_for(@user) do |f| %>
 		<% if @user.errors.any? %>
 			<div id="error_explanation">
@@ -15,19 +15,21 @@
 		<div class="field">
 			<%= f.label :name, "Full Name" %><br />
 			<%= f.text_field :name %>
-		</div> 
+		</div>
 		<div class="field">
-			<%= f.label :email %><br />
-			<%= f.text_field :email %>
-		</div> 
+			<%= f.label :photo_1, "Photo" %><br />
+			<%= f.text_field :photo_1 %>
+		</div>
 		<div class="field">
-			<%= f.label :password %><br />
-			<%= f.password_field :password %>
-		</div> 
-		<div class="field">
-			<%= f.label :password_confirmation %><br />
-			<%= f.password_field :password_confirmation %>
-		</div> 
+			<%= f.label :photo_2, "Photo 2" %><br />
+			<%= f.text_field :photo_2 %>
+		</div>
+		<div class="field"> 
+			<%= f.radio_button(:gender, "male") %>
+			<%= f.label(:gender, "Male") %>
+			<%= f.radio_button(:gender, "female") %>
+			<%= f.label(:gender, "Female") %>
+		</div>
 		<div class="actions">
 			<%= f.submit %>
 		</div>
