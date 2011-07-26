@@ -35,7 +35,7 @@ class UsersController < ApplicationController
  
   def edit
     @user = User.find(params[:id]) 
-	redirect_to root_url unless current_user == @user, :notice => "You cannot edit other people's profiles"
+	redirect_to root_url unless current_user == @user
 	
 	@title = 'Editing ' + @user.name
 	@portfolio = @user.portfolio
