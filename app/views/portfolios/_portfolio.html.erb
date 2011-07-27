@@ -1,77 +1,84 @@
-<div id="portfolio" class="tab_content">
-	<% if @user.gender == "female" %>
-		<ul>
-			<li>
-				<div class="label">Height</div>
-				<%= @user.portfolio.height %>
-			</li>
-			
-			<li>
-				<div class="label">Bust</div>
-				<%= @user.portfolio.bust %>
-			</li>
-
-			<li>
-				<div class="label">Waist</div>
-				<%= @user.portfolio.hips %>
-			</li>
-
-			<li>
-				<div class="label">Hips</div>
-				<%= @user.portfolio.hips %>
-			</li>
-
-			<li>
-				<div class="label">Shoes</div>
-				<%= @user.portfolio.shoes %>
-			</li>
-
-			<li>
-				<div class="label">Eyes</div>
-				<%= @user.portfolio.eyes %>
-			</li>
-
-			<li>
-				<div class="label">Hair</div>
-				<%= @user.portfolio.hair %>
-			</li>
-		</ul>
+<div id="portfolio" class="tab_content">	
+	<% if @user.portfolio.height.blank? && current_user == @user then %>
+		<p><strong>There's nothing here yet!</strong><br />
+		Please enter your details by visiting your <%= link_to "edit profile", edit_user_url(@user) %> page.</p>
+	<% elsif @user.portfolio.height.blank? && current_user != @user %>
+		<p><strong>There's nothing here yet!</strong><br />This user has not entered any details in his or her profile yet.</p>
 	<% else %>
-		<ul>
-			<li>
-				<div class="label">Height</div>
-				<%= @user.portfolio.height %>
-			</li>
-			
-			<li>
-				<div class="label">Suit</div>
-				<%= @user.portfolio.suit %>
-			</li>
+		<% if @user.gender == "female" %>
+			<ul>
+				<li>
+					<div class="label">Height</div>
+					<%= @user.portfolio.height %>
+				</li>
+				
+				<li>
+					<div class="label">Bust</div>
+					<%= @user.portfolio.bust %>
+				</li>
 
-			<li>
-				<div class="label">Waist</div>
-				<%= @user.portfolio.waist %>
-			</li>
+				<li>
+					<div class="label">Waist</div>
+					<%= @user.portfolio.hips %>
+				</li>
 
-			<li>
-				<div class="label">Inseam</div>
-				<%= @user.portfolio.inseam %>
-			</li>
+				<li>
+					<div class="label">Hips</div>
+					<%= @user.portfolio.hips %>
+				</li>
 
-			<li>
-				<div class="label">Shoes</div>
-				<%= @user.portfolio.shoes %>
-			</li>
+				<li>
+					<div class="label">Shoes</div>
+					<%= @user.portfolio.shoes %>
+				</li>
 
-			<li>
-				<div class="label">Eyes</div>
-				<%= @user.portfolio.eyes %>
-			</li>
+				<li>
+					<div class="label">Eyes</div>
+					<%= @user.portfolio.eyes %>
+				</li>
 
-			<li>
-				<div class="label">Hair</div>
-				<%= @user.portfolio.hair %>
-			</li>
-		</ul>
+				<li>
+					<div class="label">Hair</div>
+					<%= @user.portfolio.hair %>
+				</li>
+			</ul>
+		<% else %>
+			<ul>
+				<li>
+					<div class="label">Height</div>
+					<%= @user.portfolio.height %>
+				</li>
+				
+				<li>
+					<div class="label">Suit</div>
+					<%= @user.portfolio.suit %>
+				</li>
+
+				<li>
+					<div class="label">Waist</div>
+					<%= @user.portfolio.waist %>
+				</li>
+
+				<li>
+					<div class="label">Inseam</div>
+					<%= @user.portfolio.inseam %>
+				</li>
+
+				<li>
+					<div class="label">Shoes</div>
+					<%= @user.portfolio.shoes %>
+				</li>
+
+				<li>
+					<div class="label">Eyes</div>
+					<%= @user.portfolio.eyes %>
+				</li>
+
+				<li>
+					<div class="label">Hair</div>
+					<%= @user.portfolio.hair %>
+				</li>
+			</ul>
+		<% end %>
 	<% end %>
 </div>

@@ -105,6 +105,7 @@ nav ul li a:last-child{
 
 #container{ 
 	padding: 0 60px; 
+	position: relative;
 }
 
 .models_list{
@@ -251,9 +252,7 @@ form .field{
 
 #content ul{
 	list-style: none;
-	margin: 100px 0 0 0;
 	padding: 0;
-	width: 300px;
 }
 
 #content ul li{
@@ -288,6 +287,8 @@ table td, table th{
 	color: #999;
 	font-size: 18px;
 	font-family: 'Myriad Pro', Arial, Sans-Serif;
+	width: 300px;
+	margin: 100px 0 0 0;
 }
  
 .content_bot{
@@ -331,3 +332,26 @@ table td, table th{
 .tab_nav .active, .tab_nav li:active{
 	background: #999;  
 } 
+
+.next_model_container{ float: right; position: relative; }
+.previous_model_container{ float: left; position: relative; }
+
+.next_model, .previous_model{
+	position: absolute;
+	top: 163px;
+	font-size: 150px;  
+	font-family: 'Trebuchet MS', Arial, Sans-Serif;
+	color: #ccc !important;
+} 
+
+.next_model{
+	left: -79px;
+}
+
+.next_model:hover, .previous_model:hover{
+	color: #aaa!important;
+}
+
+.next_model:active, .previous_model:active{
+	color: #444!important;
+}

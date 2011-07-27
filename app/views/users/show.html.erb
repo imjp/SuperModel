@@ -1,14 +1,16 @@
  <h1><%= @user.name %></h1>
  
+<span class="next_model_container"><%= link_to(">", @user.next_user, :class => "next_model", :title => "Next Model") if @user.next_user %></span>
+<span class="previous_model_container"><%= link_to("<", @user.previous_user, :class => "previous_model", :title => "Previous Model") if @user.previous_user %></span>
+
 <div id="content">	
 	<%= link_to image_tag(@user.photo_1, :class => "photo", :alt => @user.name, :width => "350", :height => "450"), @user.photo_1, :rel => "shadowbox[portfolio]" %>
 	<%= link_to image_tag(@user.photo_2, :class => "photo", :alt => @user.name, :width => "350", :height => "450"), @user.photo_2, :rel => "shadowbox[portfolio]", :class => "hidden" %>
-	 
-	 
-	<%= render "portfolios/portfolio"  %>  
+	
+	<%= render "portfolios/portfolio"  %>   
 	<%= render "contact_infos/contact_info" %>
 	  
-	<span class="photo_caption">Click the photo above to see more</span>
+	<span class="photo_caption">Click the photo above to see more</span>	
 </div>
 
 

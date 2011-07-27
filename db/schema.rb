@@ -10,10 +10,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110726025944) do
+ActiveRecord::Schema.define(:version => 20110726213000) do
 
   create_table "contact_infos", :force => true do |t|
-    t.integer  "phone"
+    t.text     "phone"
     t.string   "facebook"
     t.integer  "user_id"
     t.datetime "created_at"

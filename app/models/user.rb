@@ -56,4 +56,12 @@ class User < ActiveRecord::Base
 			self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
 		end
 	end
+	
+	def next_user
+		self.class.first(:conditions => ["name > ?", name], :order => "name asc")
+	end
+	
+	def previous_user
+		self.class.first(:conditions => ["name < ?", name], :order => "name desc")
+	end
 end

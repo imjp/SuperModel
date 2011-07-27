@@ -1,13 +1,22 @@
 <div id="contact_info" class="tab_content">
-	<ul>
-		<li>
-			<div class="label">Phone</div>
-			<%= @user.contact_info.phone %>
-		</li>
-			
-		<li>
-			<div class="label">Facebook</div>
-			<%= link_to "View Profile", @user.contact_info.facebook, :target => :blank %>
-		</li>
-	</ul>
+	<% if @user.contact_info.phone.blank? && current_user == @user then %>
+		<p><strong>There's nothing here yet!</strong><br />
+		Please enter your contact info <br />
+		by visiting your <%= link_to "edit profile", edit_user_url(@user) %> page.<br />
+		This way modeling agencies can contact you easily.</p>
+	<% elsif @user.contact_info.phone.blank? && current_user != @user %>
+		<p><strong>There's nothing here yet!</strong><br />This user has not entered any contact info yet.</p>
+	<% else %>
+		<ul>
+			<li>
+				<div class="label">Phone</div>
+				<%= @user.contact_info.phone %>
+			</li>
+				
+			<li>
+				<div class="label">Facebook</div>
+				<%= link_to "View Profile", @user.contact_info.facebook, :target => :blank %>
+			</li>
+		</ul>
+	<% end %>
 </div>

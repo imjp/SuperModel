@@ -1,9 +1,11 @@
 <ul class="models_list">	
 <% @users.each do |user| %> 
+	<% unless user.photo_1.blank? %>
 	<li>
 		<%= link_to image_tag(user.photo_1, :width => "175", :height => "131"), user.friendly_id %>
 		<%= link_to user.name, user.friendly_id, :class => "model-name" %>
 	</li>
+	<% end %>
 <% end %>
 </ul> 
 
